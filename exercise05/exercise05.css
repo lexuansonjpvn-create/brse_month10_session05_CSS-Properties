@@ -1,0 +1,46 @@
+p {
+    height: 150px;
+    width: 150px;
+    margin: 30px;
+    background-color: grey;
+    display: grid;
+    place-items: center;
+    transition: all 0.3s ease;
+} 
+/* Fade in: Mờ đi một chút khi chưa hover, rõ nét khi hover */
+.fade-in {
+  opacity: 0.8;
+}
+.fade-in:hover {
+  opacity: 1;
+}
+/* Change Color: Đổi màu nền */
+.change-color:hover {
+  background-color: #2196f3;
+  color: #ffffff;
+}
+
+/* Grow: Phóng to lên 1.2 lần */
+.grow:hover {
+  transform: scale(1.2);
+}
+
+/* Shrink: Thu nhỏ lại còn 0.8 lần */
+.shrink:hover {
+  transform: scale(0.8);
+}
+
+/* Rotate: Xoay nghiêng 30 độ (hoặc 360deg nếu muốn xoay tròn) */
+.rotate:hover {
+  transform: rotate(30deg);
+}
+
+/* Square to circle: Biến hình vuông thành hình tròn */
+.square-to-circle:hover {
+  border-radius: 50%;
+}
+
+/* Insert border: Tạo viền nằm gọn bên trong khung mà không làm phình kích thước */
+.insert-border:hover {
+  box-shadow: inset 0 0 0 10px #333333;
+}

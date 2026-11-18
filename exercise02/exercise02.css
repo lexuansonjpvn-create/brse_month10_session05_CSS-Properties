@@ -1,0 +1,15 @@
+ul {
+    list-style-type: none;
+    width: 500px;
+}
+ul li{
+    margin: 10px;
+    padding: 5px;
+    background-color: darkgrey;
+    color: black;
+    font-size: 20px;
+}
+ul li:hover {
+    background-color: rgb(80, 80, 80);
+    color: aliceblue;
+}
