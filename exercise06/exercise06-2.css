@@ -1,0 +1,135 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    background-color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+/* Khung thẻ chính */
+.card {
+    position: relative;
+    width: 440px;
+    height: 460px;
+    overflow: hidden;
+    background-color: #141414;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+}
+
+/* Ảnh nền tràn khung */
+.card-bg {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    z-index: 1;
+}
+
+/* Lớp phủ tối để tăng độ tương phản cho chữ và nút */
+.dark-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        180deg,
+        rgba(0, 0, 0, 0.28) 0%,
+        rgba(0, 0, 0, 0.35) 55%,
+        rgba(0, 0, 0, 0.78) 100%
+    );
+    z-index: 2;
+}
+
+/* Nhãn AUTOMOTIVE góc trên trái */
+.badge-automotive {
+    position: absolute;
+    top: 22px;
+    left: 22px;
+    z-index: 3;
+    background-color: #d93025;
+    color: #ffffff;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.6px;
+    padding: 6px 10px;
+    border-radius: 3px;
+    text-transform: uppercase;
+}
+
+/* Thanh điều khiển dọc bên phải */
+.sidebar-controls {
+    position: absolute;
+    top: 52%;
+    right: 18px;
+    transform: translateY(-50%);
+    z-index: 3;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.control-btn {
+    width: 44px;
+    height: 44px;
+    border-radius: 6px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: 500;
+    transition: transform 0.15s ease, background-color 0.15s ease;
+}
+
+.control-btn:hover {
+    transform: scale(1.05);
+}
+
+.gear-btn {
+    background-color: #d93025;
+    border: none;
+    color: #ffffff;
+}
+
+.step-btn {
+    background-color: rgba(20, 20, 20, 0.45);
+    border: 1px solid rgba(255, 255, 255, 0.55);
+    color: #ffffff;
+}
+
+/* Đường nối giữa các ô A - B và bánh răng */
+.connector-line {
+    width: 1px;
+    height: 16px;
+    background-color: rgba(255, 255, 255, 0.55);
+}
+
+/* Tiêu đề và mô tả góc dưới trái */
+.card-footer {
+    position: absolute;
+    left: 26px;
+    bottom: 26px;
+    z-index: 3;
+    color: #ffffff;
+}
+
+.card-title {
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 1.25;
+    margin-bottom: 4px;
+}
+
+.card-subtitle {
+    font-size: 13px;
+    font-weight: 400;
+    color: rgba(255, 255, 255, 0.85);
+}

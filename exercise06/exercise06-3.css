@@ -1,0 +1,99 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    background-color: #121212;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+/* Khung thẻ dạng dọc */
+.banner-card {
+    position: relative;
+    width: 390px;
+    height: 620px;
+    overflow: hidden;
+    background-color: #2b2b2b;
+    box-shadow: 0 12px 32px rgba(0, 0, 0, 0.45);
+}
+
+/* Ảnh nền phủ kín khung */
+.banner-image {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center top;
+    z-index: 1;
+}
+
+/* Dải chuyển sắc đen mờ dần lên trên */
+.gradient-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        to top,
+        rgba(15, 15, 15, 0.88) 0%,
+        rgba(15, 15, 15, 0.52) 32%,
+        rgba(15, 15, 15, 0.12) 55%,
+        transparent 75%
+    );
+    z-index: 2;
+}
+
+/* Nội dung nằm đè lên phần gradient dưới cùng */
+.banner-content {
+    position: absolute;
+    left: 28px;
+    right: 28px;
+    bottom: 34px;
+    z-index: 3;
+    color: #ffffff;
+}
+
+.banner-title {
+    font-size: 32px;
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: 12px;
+    letter-spacing: -0.3px;
+}
+
+.banner-description {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.45;
+    color: rgba(255, 255, 255, 0.9);
+    margin-bottom: 18px;
+    max-width: 280px;
+}
+
+.explore-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: 700;
+    transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+.explore-link:hover {
+    opacity: 0.85;
+    transform: translateX(3px);
+}
+
+.arrow-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
